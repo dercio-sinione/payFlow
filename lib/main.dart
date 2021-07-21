@@ -9,10 +9,12 @@ void main() {
           color: Colors.green,
           height: 500,
           width: 500,
-          child: Container(
-            width: 200,
-            height: 200,
-            color: Colors.amber[600],
+          child: Center(
+            child: Container(
+              width: 200,
+              height: 200,
+              color: Colors.amber[600],
+            ),
           ),
         ),
       )));
