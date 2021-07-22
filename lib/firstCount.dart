@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    title: 'Get Started',
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch: Colors.purple),
-    home: HomePage(),
-  ));
-}
+void main() => runApp(HomePage());
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -28,8 +21,11 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Scaffold(
+    return MaterialApp(
+      title: 'Get Started',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.purple),
+      home: Scaffold(
         appBar: AppBar(title: Text('Meu Primeiro App')),
         body: Center(
           child: Text("CONTADOR \n $count", textAlign: TextAlign.center),
