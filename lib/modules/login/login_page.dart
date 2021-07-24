@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_images.dart';
+import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -34,11 +35,21 @@ class _LoginPageState extends State<LoginPage> {
             Positioned(
               left: 0,
               right: 0,
-              bottom: 300,
+              bottom: size.height * 0.35,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
-                children: [Image.asset(AppImages.logomini)],
+                children: [
+                  Image.asset(AppImages.logomini),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 70, right: 70),
+                    child: Text(
+                      "Organize os seus boletos em um só lugar",
+                      style: AppTextStyles.titleHome,
+                      textAlign: TextAlign.center,
+                    ),
+                  )
+                ],
               ),
             )
           ],
