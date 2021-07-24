@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:nl_pay_flow/models/users.dart';
 import 'package:nl_pay_flow/shared/auth/auth_controller.dart';
+import 'package:nl_pay_flow/shared/models/users.dart';
 
 class LoginController {
   final authController = AuthController();
