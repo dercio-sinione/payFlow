@@ -30,7 +30,3 @@ class Users {
     return user;
   }
 }
-
-void main() {
-  print(Users.getUser(username: "dercio", password: "1234"));
-}
