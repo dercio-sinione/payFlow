@@ -10,14 +10,16 @@ class SocialLoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: AppColors.shape,
-          borderRadius: BorderRadius.circular(5),
-          border: Border.fromBorderSide(BorderSide(color: AppColors.stroke))),
+        color: AppColors.shape,
+        borderRadius: BorderRadius.circular(5),
+        border: Border.fromBorderSide(BorderSide(color: AppColors.stroke)),
+      ),
       height: 56,
       child: Row(
         children: [
-          Expanded(child: Image.asset(AppImages.google)),
+          Expanded(flex: 1, child: Image.asset(AppImages.google)),
           Expanded(
+            flex: 4,
             child: Text(
               "Entrar com Google",
               style: AppTextStyles.buttonGray,
