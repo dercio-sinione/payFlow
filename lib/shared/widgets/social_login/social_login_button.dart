@@ -23,7 +23,7 @@ class SocialLoginButton extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset(AppImages.google),
-                  SizedBox(width: 16),
+                  SizedBox(width: 12),
                   Container(
                     height: 56,
                     width: 1,
@@ -33,15 +33,10 @@ class SocialLoginButton extends StatelessWidget {
               )),
           Expanded(
             flex: 4,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Entrar com Google",
-                  style: AppTextStyles.buttonGray,
-                  // textAlign: TextAlign.center,
-                ),
-              ],
+            child: Text(
+              "Entrar com Google",
+              style: AppTextStyles.buttonGray,
+              textAlign: TextAlign.center,
             ),
           ),
         ],
