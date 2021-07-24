@@ -2,22 +2,8 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(HomePage());
 
-class HomePage extends StatefulWidget {
-  HomePage({Key? key}) : super(key: key);
-
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  int count = 0;
-
-  void fnCount() {
-    setState(() {
-      count++;
-    });
-    print(count);
-  }
+class AppWidget extends StatelessWidget {
+  const AppWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
