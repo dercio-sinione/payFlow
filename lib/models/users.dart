@@ -15,8 +15,7 @@ class Users {
     return listUsers;
   }
 
-  dynamic getUser({required String username, required String password}) {
-    // var user = Users(username: "", email: "", password: "");
+  static dynamic getUser({required String username, required String password}) {
     var user;
     for (var item in listUsers) {
       if (item.username == username && item.password == password) {
@@ -30,4 +29,8 @@ class Users {
     }
     return user;
   }
+}
+
+void main() {
+  print(Users.getUser(username: "dercio", password: "1234"));
 }
