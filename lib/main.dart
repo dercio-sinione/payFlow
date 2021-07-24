@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/modules/splash/splash_page.dart';
+import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 
 void main() => runApp(AppWidget());
 
@@ -9,9 +10,9 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Get Started',
+        title: 'Pay Flow',
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(primarySwatch: Colors.purple),
+        theme: ThemeData(primaryColor: AppColors.primary),
         home: SplashPage());
   }
 }
