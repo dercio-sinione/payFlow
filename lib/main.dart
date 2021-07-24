@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nl_pay_flow/modules/splash/splash_page.dart';
 
-void main() => runApp(HomePage());
+void main() => runApp(AppWidget());
 
 class AppWidget extends StatelessWidget {
   const AppWidget({Key? key}) : super(key: key);
@@ -8,19 +9,9 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Get Started',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.purple),
-      home: Scaffold(
-        appBar: AppBar(title: Text('Meu Primeiro App')),
-        body: Center(
-          child: Text("CONTADOR \n $count", textAlign: TextAlign.center),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () => fnCount(),
-          child: Icon(Icons.add),
-        ),
-      ),
-    );
+        title: 'Get Started',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(primarySwatch: Colors.purple),
+        home: SplashPage());
   }
 }
