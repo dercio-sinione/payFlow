@@ -8,12 +8,15 @@ class SocialLoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 56,
       child: Row(
         children: [
-          Image.asset(AppImages.google),
-          Text(
-            "Entrar com Google",
-            style: AppTextStyles.buttonGray,
+          Expanded(child: Image.asset(AppImages.google)),
+          Expanded(
+            child: Text(
+              "Entrar com Google",
+              style: AppTextStyles.buttonGray,
+            ),
           )
         ],
       ),
