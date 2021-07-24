@@ -30,19 +30,20 @@ class _LoginPageState extends State<LoginPage> {
               top: 40,
               left: 0,
               right: 0,
-              child: Image.asset(AppImages.person, width: 208, height: 373),
+              child: Image.asset(AppImages.person, width: 208, height: 300),
             ),
             Positioned(
+              bottom: size.height * 0.35,
               left: 0,
               right: 0,
-              bottom: size.height * 0.35,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(AppImages.logomini),
                   Padding(
-                    padding: const EdgeInsets.only(left: 70, right: 70),
+                    padding:
+                        const EdgeInsets.only(top: 30, left: 70, right: 70),
                     child: Text(
                       "Organize os seus boletos em um só lugar",
                       style: AppTextStyles.titleHome,
