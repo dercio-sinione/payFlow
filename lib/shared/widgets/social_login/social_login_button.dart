@@ -9,38 +9,41 @@ class SocialLoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: AppColors.shape,
-        borderRadius: BorderRadius.circular(5),
-        border: Border.fromBorderSide(BorderSide(color: AppColors.stroke)),
-      ),
-      height: 56,
-      child: Row(
-        children: [
-          Expanded(
-              flex: 1,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(AppImages.google),
-                  SizedBox(width: 12),
-                  Container(
-                    height: 56,
-                    width: 1,
-                    color: AppColors.stroke,
-                  )
-                ],
-              )),
-          Expanded(
-            flex: 4,
-            child: Text(
-              "Entrar com Google",
-              style: AppTextStyles.buttonGray,
-              textAlign: TextAlign.center,
+    return InkWell(
+      onTap: onTape,
+      child: Container(
+        decoration: BoxDecoration(
+          color: AppColors.shape,
+          borderRadius: BorderRadius.circular(5),
+          border: Border.fromBorderSide(BorderSide(color: AppColors.stroke)),
+        ),
+        height: 56,
+        child: Row(
+          children: [
+            Expanded(
+                flex: 1,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset(AppImages.google),
+                    SizedBox(width: 12),
+                    Container(
+                      height: 56,
+                      width: 1,
+                      color: AppColors.stroke,
+                    )
+                  ],
+                )),
+            Expanded(
+              flex: 4,
+              child: Text(
+                "Entrar com Google",
+                style: AppTextStyles.buttonGray,
+                textAlign: TextAlign.center,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
