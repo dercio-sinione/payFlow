@@ -4,7 +4,8 @@ import 'package:nl_pay_flow/shared/themes/app_images.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
 class SocialLoginButton extends StatelessWidget {
-  const SocialLoginButton({Key? key}) : super(key: key);
+  final VoidCallback onTape;
+  const SocialLoginButton({Key? key, required this.onTape}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
