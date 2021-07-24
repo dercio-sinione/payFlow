@@ -10,7 +10,9 @@ class SocialLoginButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: AppColors.shape, borderRadius: BorderRadius.circular(5)),
+          color: AppColors.shape,
+          borderRadius: BorderRadius.circular(5),
+          border: Border.fromBorderSide(BorderSide(color: AppColors.stroke))),
       height: 56,
       child: Row(
         children: [
