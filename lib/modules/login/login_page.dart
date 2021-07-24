@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_images.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
+import 'package:nl_pay_flow/shared/widgets/social_login/social_login_button.dart';
 
 class LoginPage extends StatefulWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -49,7 +50,8 @@ class _LoginPageState extends State<LoginPage> {
                       style: AppTextStyles.titleHome,
                       textAlign: TextAlign.center,
                     ),
-                  )
+                  ),
+                  SocialLoginButton()
                 ],
               ),
             )
