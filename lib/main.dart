@@ -17,11 +17,9 @@ class AppWidget extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: AppColors.primary),
       initialRoute: "/login",
-      routes: {
-        "/splash": (context) => SplashPage(),
-        "/login": (context) => LoginPage(),
-        "/home": (context) => HomePage(),
-      },
+      routes: fnAppRoutes(context),
     );
   }
 }
+
+
