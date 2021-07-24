@@ -32,6 +32,9 @@ class _LoginPageState extends State<LoginPage> {
               child: Image.asset(AppImages.person, width: 208, height: 373),
             ),
             Positioned(
+              left: 0,
+              right: 0,
+              bottom: 300,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
