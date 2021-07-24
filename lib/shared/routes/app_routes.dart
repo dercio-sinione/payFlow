@@ -6,8 +6,8 @@ import 'package:nl_pay_flow/modules/splash/splash_page.dart';
 
 dynamic fnAppRoutes(BuildContext context) {
   return {
-    "/splash": (context) => SplashPage(),
-    "/login": (context) => LoginPage(),
-    "/home": (context) => HomePage(),
+    AppRoutes.splash: (context) => SplashPage(),
+    AppRoutes.login: (context) => LoginPage(),
+    AppRoutes.home: (context) => HomePage(),
   };
 }
