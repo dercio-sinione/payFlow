@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_images.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
@@ -8,6 +9,8 @@ class SocialLoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+          color: AppColors.shape, borderRadius: BorderRadius.circular(5)),
       height: 56,
       child: Row(
         children: [
