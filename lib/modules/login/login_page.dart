@@ -34,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
               child: Image.asset(AppImages.person, width: 208, height: 300),
             ),
             Positioned(
-              bottom: size.height * 0.35,
+              bottom: size.height * 0.08,
               left: 0,
               right: 0,
               child: Column(
@@ -51,7 +51,11 @@ class _LoginPageState extends State<LoginPage> {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  SocialLoginButton()
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 40, right: 40, top: 40),
+                    child: SocialLoginButton(),
+                  )
                 ],
               ),
             )
