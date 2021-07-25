@@ -17,7 +17,7 @@ class InputTextWidget extends StatelessWidget {
           style: AppTextStyles.input,
           decoration: InputDecoration(
             contentPadding: EdgeInsets.zero,
-            labelText: "Nome do Boleto",
+            labelText: label,
             labelStyle: AppTextStyles.input,
             border: InputBorder.none,
             icon: Row(
@@ -25,10 +25,7 @@ class InputTextWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18),
-                  child: Icon(
-                    Icons.file_copy,
-                    color: AppColors.primary,
-                  ),
+                  child: Icon(icon, color: AppColors.primary),
                 ),
                 Container(width: 1, height: 46, color: AppColors.stroke),
               ],
