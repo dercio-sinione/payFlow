@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/modules/home/home_controller.dart';
+import 'package:nl_pay_flow/modules/meus_boletos/meus_boletos_page.dart';
 import 'package:nl_pay_flow/shared/models/boleto.dart';
 import 'package:nl_pay_flow/shared/routes/routes_config.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
@@ -17,9 +18,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
   final pages = [
-    Container(
-      child: BoletoListWidget(),
-    ),
+    MeusBoletosPage(),
     Container(color: Colors.blue),
   ];
 
