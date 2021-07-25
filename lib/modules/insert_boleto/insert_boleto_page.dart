@@ -11,7 +11,12 @@ class InsertBoletoPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.background,
         elevation: 0,
-        title: Text('Insert Boleto Page'),
+        leading: BackButton(color: AppColors,),
+      ),
+      body: Column(
+        children: [
+          Text('Insert Boleto Page'),
+        ],
       ),
     );
   }
