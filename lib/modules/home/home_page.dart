@@ -12,13 +12,18 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
-  final page = [
+  final pages = [
     Container(color: Colors.red),
     Container(color: Colors.blue),
   ];
 
   @override
   Widget build(BuildContext context) {
+    void fnChangePage(int index) {
+      setState(() {});
+      homeController.setPage(index);
+    }
+
     return Scaffold(
       appBar: PreferredSize(
         child: Container(
@@ -51,13 +56,14 @@ class _HomePageState extends State<HomePage> {
         ),
         preferredSize: Size.fromHeight(152),
       ),
+      body: pages[homeController.currentPage],
       bottomNavigationBar: Container(
         height: 90,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-              onPressed: () => homeController.setPage(0),
+              onPressed: () => fnChangePage(0),
               icon: Icon(Icons.home),
               color: AppColors.primary,
             ),
@@ -76,7 +82,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             IconButton(
-              onPressed: () => homeController.setPage(1),
+              onPressed: () => fnChangePage(1),
               icon: Icon(Icons.description_outlined),
               color: AppColors.body,
             ),
