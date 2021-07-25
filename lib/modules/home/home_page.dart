@@ -58,10 +58,6 @@ class HomePage extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {},
-              icon: Icon(Icons.add_box_outlined),
-            ),
-            IconButton(
-              onPressed: () {},
               icon: Icon(Icons.description_outlined),
               color: AppColors.body,
             ),
