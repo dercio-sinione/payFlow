@@ -24,7 +24,7 @@ class _ExtractPagePageState extends State<ExtractPagePage> {
             child: Row(
               children: [
                 Text(
-                  "Meus boletos",
+                  "Meu Extrato",
                   style: AppTextStyles.titleBoldHeading,
                   // textAlign: TextAlign.start,
                 ),
