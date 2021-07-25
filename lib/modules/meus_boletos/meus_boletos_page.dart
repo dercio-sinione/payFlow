@@ -14,13 +14,24 @@ class MeusBoletosPage extends StatefulWidget {
 class _MeusBoletosPageState extends State<MeusBoletosPage> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
+    return SingleChildScrollView(
       child: Column(
         children: [
-          BoletoInfoWidget(size: 14),
+          Stack(
+            children: [
+              Container(
+                color: AppColors.primary,
+                height: 40,
+                width: double.maxFinite,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 24),
+                child: BoletoInfoWidget(size: 14),
+              ),
+            ],
+          ),
           Padding(
-            padding: const EdgeInsets.only(top: 24),
+            padding: const EdgeInsets.only(top: 24, left: 24, right: 24),
             child: Row(
               children: [
                 Text(
@@ -32,7 +43,7 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 18),
+            padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
             child: Divider(
               color: AppColors.stroke,
               thickness: 1,
