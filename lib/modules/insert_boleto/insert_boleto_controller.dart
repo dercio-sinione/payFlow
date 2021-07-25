@@ -18,7 +18,7 @@ class InsertBoletoController {
       value?.isEmpty ?? true ? "O código de barra não pode ser vazio" : null;
 
   void onChange(
-      {String? name, String? dueDate, Double? value, String? barcode}) {}
+      {String? name, String? dueDate, double? value, String? barcode}) {}
 
   void CadastrarBoleto() {
     final form = formKey.currentState;
