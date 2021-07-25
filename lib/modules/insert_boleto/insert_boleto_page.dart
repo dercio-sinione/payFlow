@@ -43,56 +43,58 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
         elevation: 0,
         leading: BackButton(color: AppColors.input),
       ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 93),
-              child: Text(
-                'Preencha os dados do Boleto',
-                style: AppTextStyles.titleBoldHeading,
-                textAlign: TextAlign.center,
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 93),
+                child: Text(
+                  'Preencha os dados do Boleto',
+                  style: AppTextStyles.titleBoldHeading,
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-            SizedBox(height: 24),
-            Form(
-              key: controller.formKey,
-              child: Column(
-                children: [
-                  InputTextWidget(
-                    label: "Nome do Boleto",
-                    icon: Icons.description_outlined,
-                    onChanged: (value) {},
-                    validator: controller.validateName,
-                  ),
-                  InputTextWidget(
-                    label: "Vencimento",
-                    icon: FontAwesomeIcons.timesCircle,
-                    onChanged: (value) {},
-                    controller: dueDateInputController,
-                    validator: controller.validateVencimento,
-                  ),
-                  InputTextWidget(
-                    label: "Valor",
-                    icon: FontAwesomeIcons.wallet,
-                    onChanged: (value) {},
-                    controller: moneyInputController,
-                    validator: (_) => controller
-                        .validateValor(moneyInputController.numberValue),
-                  ),
-                  InputTextWidget(
-                    label: "Código",
-                    icon: FontAwesomeIcons.barcode,
-                    onChanged: (value) {},
-                    controller: barcodeInputController,
-                    validator: controller.validateCodigo,
-                  ),
-                ],
-              ),
-            )
-          ],
+              SizedBox(height: 24),
+              Form(
+                key: controller.formKey,
+                child: Column(
+                  children: [
+                    InputTextWidget(
+                      label: "Nome do Boleto",
+                      icon: Icons.description_outlined,
+                      onChanged: (value) {},
+                      validator: controller.validateName,
+                    ),
+                    InputTextWidget(
+                      label: "Vencimento",
+                      icon: FontAwesomeIcons.timesCircle,
+                      onChanged: (value) {},
+                      controller: dueDateInputController,
+                      validator: controller.validateVencimento,
+                    ),
+                    InputTextWidget(
+                      label: "Valor",
+                      icon: FontAwesomeIcons.wallet,
+                      onChanged: (value) {},
+                      controller: moneyInputController,
+                      validator: (_) => controller
+                          .validateValor(moneyInputController.numberValue),
+                    ),
+                    InputTextWidget(
+                      label: "Código",
+                      icon: FontAwesomeIcons.barcode,
+                      onChanged: (value) {},
+                      controller: barcodeInputController,
+                      validator: controller.validateCodigo,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: SetLabelButtons(
