@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/modules/home/home_controller.dart';
+import 'package:nl_pay_flow/shared/routes/routes_config.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
@@ -68,7 +69,7 @@ class _HomePageState extends State<HomePage> {
               color: AppColors.primary,
             ),
             GestureDetector(
-              onTap: () => print("Clicou"),
+              onTap: () => Navigator.pushNamed(context, AppRoutes.insertBoleto),
               child: Container(
                 width: 56,
                 height: 56,
