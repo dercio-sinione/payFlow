@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:nl_pay_flow/models/users.dart';
 import 'package:nl_pay_flow/shared/auth/auth_controller.dart';
+import 'package:nl_pay_flow/shared/models/users.dart';
 
 class LoginController {
   final authController = AuthController();
@@ -10,8 +10,8 @@ class LoginController {
       required String username,
       required String password}) async {
     try {
-      Users user = Users.getUser(username: username, password: password);
-      print("User: ${user.username} \n Email: ${user.email}");
+      User? user = User.getUser(username: username, password: password);
+      print("User: ${user!.username} \n Email: ${user.email}");
       authController.setUser(context, user);
     } catch (ex) {
       print("Username ou senha incorrecta!!!");
