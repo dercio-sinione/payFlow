@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 import 'package:nl_pay_flow/shared/widgets/input_text/input_text_widget.dart';
@@ -32,15 +33,15 @@ class InsertBoletoPage extends StatelessWidget {
           ),
           InputTextWidget(
             label: "Vencimento",
-            icon: Icons.description_outlined,
+            icon: FontAwesomeIcons.timesCircle,
           ),
           InputTextWidget(
             label: "Valor",
-            icon: Icons.description_outlined,
+            icon: FontAwesomeIcons.wallet,
           ),
           InputTextWidget(
             label: "Código",
-            icon: Icons.description_outlined,
+            icon: FontAwesomeIcons.barcode,
           ),
         ],
       ),
