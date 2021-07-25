@@ -5,9 +5,14 @@ import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 import 'package:nl_pay_flow/shared/widgets/input_text/input_text_widget.dart';
 import 'package:nl_pay_flow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
-class InsertBoletoPage extends StatelessWidget {
+class InsertBoletoPage extends StatefulWidget {
   const InsertBoletoPage({Key? key}) : super(key: key);
 
+  @override
+  _InsertBoletoPageState createState() => _InsertBoletoPageState();
+}
+
+class _InsertBoletoPageState extends State<InsertBoletoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
