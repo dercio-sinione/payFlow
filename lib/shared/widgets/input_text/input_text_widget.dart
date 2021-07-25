@@ -12,15 +12,21 @@ class InputTextWidget extends StatelessWidget {
         TextFormField(
           style: AppTextStyles.input,
           decoration: InputDecoration(
+            contentPadding: EdgeInsets.zero,
+            labelText: "Nome do Boleto",
+            labelStyle: AppTextStyles.input,
             border: InputBorder.none,
             icon: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18),
-                  child: Icon(Icons.file_copy),
+                  child: Icon(
+                    Icons.file_copy,
+                    color: AppColors.primary,
+                  ),
                 ),
-                Container(width: 1, height: 48, color: AppColors.stroke),
+                Container(width: 1, height: 46, color: AppColors.stroke),
               ],
             ),
           ),
