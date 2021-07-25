@@ -21,6 +21,20 @@ class _BoletoListWidgetState extends State<BoletoListWidget> {
               value: 15000,
               barcode: "5678"),
         ),
+        BoletoTileWidget(
+          data: BoletoModel(
+              name: "Dercio",
+              dueDate: "12/04/2021",
+              value: 15000,
+              barcode: "5678"),
+        ),
+        BoletoTileWidget(
+          data: BoletoModel(
+              name: "Dercio",
+              dueDate: "12/04/2021",
+              value: 15000,
+              barcode: "5678"),
+        ),
       ],
     );
   }
