@@ -75,7 +75,8 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
               icon: FontAwesomeIcons.wallet,
               onChanged: (value) {},
               controller: moneyInputController,
-              validator: controller.validateValor,
+              validator: (_) =>
+                  controller.validateValor(moneyInputController.numberValue),
             ),
             InputTextWidget(
               label: "Código",
