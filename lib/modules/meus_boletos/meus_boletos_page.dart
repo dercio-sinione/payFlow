@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 import 'package:nl_pay_flow/shared/widgets/boleto_info/boleto_info_widget.dart';
+import 'package:nl_pay_flow/shared/widgets/boleto_list/boleto_list_controller.dart';
 import 'package:nl_pay_flow/shared/widgets/boleto_list/boleto_list_widget.dart';
 
 class MeusBoletosPage extends StatefulWidget {
@@ -12,6 +13,8 @@ class MeusBoletosPage extends StatefulWidget {
 }
 
 class _MeusBoletosPageState extends State<MeusBoletosPage> {
+  final controller = BoletoListController();
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

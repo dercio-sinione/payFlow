@@ -4,20 +4,21 @@ import 'package:nl_pay_flow/shared/widgets/boleto_list/boleto_list_controller.da
 import 'package:nl_pay_flow/shared/widgets/boleto_tile/boleto_tile_widget.dart';
 
 class BoletoListWidget extends StatefulWidget {
-  const BoletoListWidget({Key? key}) : super(key: key);
+  final BoletoListController controller;
+  const BoletoListWidget({Key? key, required this.controller})
+      : super(key: key);
 
   @override
   _BoletoListWidgetState createState() => _BoletoListWidgetState();
 }
 
 class _BoletoListWidgetState extends State<BoletoListWidget> {
-  final controller = BoletoListController();
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder<List<BoletoModel>>(
-      valueListenable: controller.boletosNotifier,
+      valueListenable: widget.controller.boletosNotifier,
       builder: (_, boletos, __) => Column(
-          children: controller.boletos
+          children: widget.controller.boletos
               .map((e) => BoletoTileWidget(data: e))
               .toList()),
     );
