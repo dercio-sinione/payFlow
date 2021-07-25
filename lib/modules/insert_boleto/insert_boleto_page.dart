@@ -25,7 +25,9 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    if (widget.barcode != null) {
+      barcodeInputController.text = widget.barcode!;
+    }
     super.initState();
   }
 
