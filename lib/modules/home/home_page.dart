@@ -71,7 +71,9 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               onPressed: () => fnChangePage(0),
               icon: Icon(Icons.home),
-              color: AppColors.primary,
+              color: homeController.currentPage == 0
+                  ? AppColors.primary
+                  : AppColors.body,
             ),
             GestureDetector(
               onTap: () => Navigator.pushNamed(context, AppRoutes.insertBoleto),
@@ -90,7 +92,9 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               onPressed: () => fnChangePage(1),
               icon: Icon(Icons.description_outlined),
-              color: AppColors.body,
+              color: homeController.currentPage == 1
+                  ? AppColors.primary
+                  : AppColors.body,
             ),
           ],
         ),
