@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
+import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
 class InsertBoletoPage extends StatelessWidget {
   const InsertBoletoPage({Key? key}) : super(key: key);
@@ -11,11 +12,19 @@ class InsertBoletoPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColors.background,
         elevation: 0,
-        leading: BackButton(color: AppColors,),
+        leading: BackButton(color: AppColors.input),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('Insert Boleto Page'),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 93, vertical: 24),
+            child: Text(
+              'Preencha os dados do Boleto',
+              style: AppTextStyles.titleBoldHeading,
+              textAlign: TextAlign.center,
+            ),
+          ),
         ],
       ),
     );
