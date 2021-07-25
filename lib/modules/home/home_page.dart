@@ -4,6 +4,7 @@ import 'package:nl_pay_flow/shared/models/boleto.dart';
 import 'package:nl_pay_flow/shared/routes/routes_config.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
+import 'package:nl_pay_flow/shared/widgets/boleto_list/boleto_list_widget.dart';
 import 'package:nl_pay_flow/shared/widgets/boleto_tile/boleto_tile_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -17,13 +18,7 @@ class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
   final pages = [
     Container(
-      child: BoletoTileWidget(
-        data: BoletoModel(
-            name: "Dercio",
-            dueDate: "12/04/2021",
-            value: 15000,
-            barcode: "5678"),
-      ),
+      child: BoletoListWidget(),
     ),
     Container(color: Colors.blue),
   ];
