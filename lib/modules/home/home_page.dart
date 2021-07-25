@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nl_pay_flow/modules/home/home_controller.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
@@ -10,6 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final homeController = HomeController()
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +52,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-              onPressed: () {},
+              onPressed: ()=> homeController.setPage(0),
               icon: Icon(Icons.home),
               color: AppColors.primary,
             ),
@@ -69,7 +71,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed:()=> homeController.setPage(1),
               icon: Icon(Icons.description_outlined),
               color: AppColors.body,
             ),
