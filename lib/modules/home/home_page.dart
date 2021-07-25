@@ -11,7 +11,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final homeController = HomeController()
+  final homeController = HomeController();
+  final page = [
+    Container(color: Colors.red),
+    Container(color: Colors.blue),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,7 +57,7 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-              onPressed: ()=> homeController.setPage(0),
+              onPressed: () => homeController.setPage(0),
               icon: Icon(Icons.home),
               color: AppColors.primary,
             ),
@@ -71,7 +76,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             IconButton(
-              onPressed:()=> homeController.setPage(1),
+              onPressed: () => homeController.setPage(1),
               icon: Icon(Icons.description_outlined),
               color: AppColors.body,
             ),
