@@ -56,7 +56,7 @@ class InsertBoletoPage extends StatelessWidget {
       ),
       bottomNavigationBar: SetLabelButtons(
         labelPrimary: "Cancelar",
-        onTapPrimary: () {},
+        onTapPrimary: () => Navigator.pop(context),
         labelSecondary: "Cadastrar",
         onTapSecondary: () {},
         enableSecondaryColor: true,
