@@ -10,8 +10,8 @@ class LoginController {
       required String username,
       required String password}) async {
     try {
-      Users user = Users.getUser(username: username, password: password);
-      print("User: ${user.username} \n Email: ${user.email}");
+      User? user = User.getUser(username: username, password: password);
+      print("User: ${user!.username} \n Email: ${user.email}");
       authController.setUser(context, user);
     } catch (ex) {
       print("Username ou senha incorrecta!!!");

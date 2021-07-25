@@ -1,17 +1,30 @@
-List<Users> listUsers = [
-  Users(username: "dercio", email: "dercio@gmail.com", password: "1234"),
-  Users(username: "ana", email: "ana@gmail.com", password: "1234a"),
-  Users(username: "derone", email: "derone@gmail.com", password: "1234")
+import 'dart:convert';
+
+import 'package:nl_pay_flow/shared/themes/app_images.dart';
+
+List<User> listUsers = [
+  User(
+      username: "dercio",
+      email: "dercio@gmail.com",
+      password: "1234",
+      photoURL: AppImages.person),
+  User(username: "ana", email: "ana@gmail.com", password: "1234a"),
+  User(username: "derone", email: "derone@gmail.com", password: "1234")
 ];
 
-class Users {
+class User {
   String username;
   String email;
-  String password;
+  String? photoURL;
+  String? password;
 
-  Users({required this.username, required this.email, required this.password});
+  User(
+      {required this.username,
+      required this.email,
+      this.password,
+      this.photoURL});
 
-  static List<Users> allUser() {
+  static List<User> allUser() {
     return listUsers;
   }
 
@@ -19,7 +32,7 @@ class Users {
     var user;
     for (var item in listUsers) {
       if (item.username == username && item.password == password) {
-        user = Users(
+        user = User(
             email: item.email,
             username: item.username,
             password: item.password);
@@ -29,4 +42,23 @@ class Users {
     }
     return user;
   }
+
+  Map<String, dynamic> toMap() => {
+        "name": username,
+        "email": email,
+        "password": password,
+        "photoURL": photoURL
+      };
+
+  String toJson() => jsonEncode(toMap());
+
+  factory User.fromMap(Map<String, dynamic> map) {
+    return User(
+        username: map['name'],
+        email: map['email'],
+        password: map['password'],
+        photoURL: map['photoURL']);
+  }
+
+  factory User.fromJson(String json) => User.fromMap(jsonDecode(json));
 }

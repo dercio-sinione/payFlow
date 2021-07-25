@@ -1,13 +1,14 @@
 import 'package:flutter/widgets.dart';
+import 'package:nl_pay_flow/shared/models/users.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController {
   var _isAuthenticated = false;
-  var _user;
+  User? _user;
 
-  get user => _user;
+  User? get user => _user!;
 
-  void setUser(BuildContext context, var user) {
+  void setUser(BuildContext context, User? user) {
     if (user != null) {
       _user = user;
       _isAuthenticated = true;
@@ -18,16 +19,20 @@ class AuthController {
     }
   }
 
-  Future<void> saveUser(var user) async {
+  Future<void> saveUser(User user) async {
     final instance = await SharedPreferences.getInstance();
-    await instance.setString("user", user);
+    await instance.setString("user", user.toJson());
     return;
   }
 
   Future<void> currentUser(BuildContext context) async {
     final instance = await SharedPreferences.getInstance();
-    final user = instance.get("user");
-    setUser(context, user);
-    return;
+    if (instance.containsKey("user")) {
+      final json = instance.get("user") as String;
+      setUser(context, User.fromJson(json));
+      return;
+    } else {
+      setUser(context, null);
+    }
   }
 }
