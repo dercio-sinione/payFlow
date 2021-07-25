@@ -14,14 +14,23 @@ class HomePage extends StatelessWidget {
           color: AppColors.primary,
           child: Center(
             child: ListTile(
-              title: Text("Olá, Dércio", style: AppTextStyles.captionShape),
+              title: Text.rich(
+                TextSpan(
+                    text: "Olá, ",
+                    style: AppTextStyles.titleRegular,
+                    children: [
+                      TextSpan(
+                          text: "Dércio",
+                          style: AppTextStyles.titleBoldBackground),
+                    ]),
+              ),
               subtitle: Text("Mantenha as suas contas em dia.",
                   style: AppTextStyles.captionShape),
               trailing: Container(
                 width: 48,
                 height: 40,
                 decoration: BoxDecoration(
-                  color: Colors.black,
+                  color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
                 ),
               ),
@@ -29,6 +38,17 @@ class HomePage extends StatelessWidget {
           ),
         ),
         preferredSize: Size.fromHeight(152),
+      ),
+      bottomNavigationBar: Container(
+        height: 90,
+        child: Row(
+          children: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.home)),
+            IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
+            IconButton(
+                onPressed: () {}, icon: Icon(Icons.description_outlined)),
+          ],
+        ),
       ),
     );
   }
