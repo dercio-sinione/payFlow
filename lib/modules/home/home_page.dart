@@ -43,10 +43,28 @@ class HomePage extends StatelessWidget {
         height: 90,
         child: Row(
           children: [
-            IconButton(onPressed: () {}, icon: Icon(Icons.home)),
-            IconButton(onPressed: () {}, icon: Icon(Icons.add_box_outlined)),
             IconButton(
-                onPressed: () {}, icon: Icon(Icons.description_outlined)),
+              onPressed: () {},
+              icon: Icon(Icons.home),
+              color: AppColors.primary,
+            ),
+            Container(
+              width: 56,
+              height: 56,
+              decoration: BoxDecoration(
+                color: AppColors.primary,
+              ),
+              child: Icon(Icons.add_box_outlined),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.add_box_outlined),
+            ),
+            IconButton(
+              onPressed: () {},
+              icon: Icon(Icons.description_outlined),
+              color: AppColors.body,
+            ),
           ],
         ),
       ),
