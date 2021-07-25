@@ -3,12 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:nl_pay_flow/modules/extract/extract_page.dart';
 import 'package:nl_pay_flow/modules/home/home_controller.dart';
 import 'package:nl_pay_flow/modules/meus_boletos/meus_boletos_page.dart';
+import 'package:nl_pay_flow/shared/models/users.dart';
 import 'package:nl_pay_flow/shared/routes/routes_config.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final User user;
+  const HomePage({Key? key, required this.user}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -41,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                     style: AppTextStyles.titleRegular,
                     children: [
                       TextSpan(
-                          text: "Dércio",
+                          text: "${widget.user.username}",
                           style: AppTextStyles.titleBoldBackground),
                     ]),
               ),
@@ -53,6 +55,9 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
+                  image: DecorationImage(
+                    image: NetworkImage(widget.user.photoURL!),
+                  ),
                 ),
               ),
             ),
