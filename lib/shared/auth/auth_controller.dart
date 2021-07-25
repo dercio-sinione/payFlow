@@ -3,7 +3,6 @@ import 'package:nl_pay_flow/shared/models/users.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AuthController {
-  var _isAuthenticated = false;
   User? _user;
 
   User? get user => _user!;
@@ -11,10 +10,8 @@ class AuthController {
   void setUser(BuildContext context, User? user) {
     if (user != null) {
       _user = user;
-      _isAuthenticated = true;
       Navigator.pushReplacementNamed(context, "/home");
     } else {
-      _isAuthenticated = false;
       Navigator.pushReplacementNamed(context, "/login");
     }
   }
