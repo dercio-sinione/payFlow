@@ -26,7 +26,22 @@ class InsertBoletoPage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          InputTextWidget()
+          InputTextWidget(
+            label: "Nome do Boleto",
+            icon: Icons.description_outlined,
+          ),
+          InputTextWidget(
+            label: "Vencimento",
+            icon: Icons.description_outlined,
+          ),
+          InputTextWidget(
+            label: "Valor",
+            icon: Icons.description_outlined,
+          ),
+          InputTextWidget(
+            label: "Código",
+            icon: Icons.description_outlined,
+          ),
         ],
       ),
     );
