@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
               decoration: BoxDecoration(
                 color: AppColors.primary,
               ),
-              child: Icon(Icons.add_box_outlined),
+              child: Icon(Icons.add_box_outlined, color: AppColors.background,),
             ),
             IconButton(
               onPressed: () {},
