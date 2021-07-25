@@ -50,10 +50,17 @@ class SetLabelButtons extends StatelessWidget {
                   ),
                 ],
                 DividerWidget(height: 56),
-                LabelButton.heading(
-                  label: labelSecondary,
-                  onPressed: onTapSecondary,
-                )
+                if (enableSecondaryColor) ...[
+                  LabelButton.primary(
+                    label: labelSecondary,
+                    onPressed: onTapSecondary,
+                  )
+                ] else ...[
+                  LabelButton.heading(
+                    label: labelSecondary,
+                    onPressed: onTapSecondary,
+                  )
+                ]
               ],
             ),
           ),

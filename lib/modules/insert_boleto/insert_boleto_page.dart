@@ -55,6 +55,7 @@ class InsertBoletoPage extends StatelessWidget {
         onTapPrimary: () {},
         labelSecondary: "Cadastrar",
         onTapSecondary: () {},
+        enableSecondaryColor: true,
       ),
     );
   }
