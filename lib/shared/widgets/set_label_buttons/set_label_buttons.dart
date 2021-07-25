@@ -25,25 +25,38 @@ class SetLabelButtons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: AppColors.background,
-      height: 56,
-      child: Row(
+      height: 57,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          if (enablePrimaryColor) ...[
-            LabelButton.primary(
-              label: labelPrimary,
-              onPressed: onTapPrimary,
+          Divider(
+            thickness: 1,
+            height: 1,
+            color: AppColors.stroke,
+          ),
+          Container(
+            height: 56,
+            child: Row(
+              children: [
+                if (enablePrimaryColor) ...[
+                  LabelButton.primary(
+                    label: labelPrimary,
+                    onPressed: onTapPrimary,
+                  ),
+                ] else ...[
+                  LabelButton.heading(
+                    label: labelPrimary,
+                    onPressed: onTapPrimary,
+                  ),
+                ],
+                DividerWidget(height: 56),
+                LabelButton.heading(
+                  label: labelSecondary,
+                  onPressed: onTapSecondary,
+                )
+              ],
             ),
-          ] else ...[
-            LabelButton.heading(
-              label: labelPrimary,
-              onPressed: onTapPrimary,
-            ),
-          ],
-          DividerWidget(height: 56),
-          LabelButton.heading(
-            label: labelSecondary,
-            onPressed: onTapSecondary,
-          )
+          ),
         ],
       ),
     );
