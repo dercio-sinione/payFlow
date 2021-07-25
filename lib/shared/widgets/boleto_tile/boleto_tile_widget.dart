@@ -9,7 +9,7 @@ class BoletoTileWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      // contentPadding: EdgeInsets.zero,
+      contentPadding: EdgeInsets.zero,
       title: Text(data.name!, style: AppTextStyles.titleListTile),
       subtitle:
           Text("Vence em ${data.dueDate}", style: AppTextStyles.captionBody),
