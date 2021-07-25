@@ -19,8 +19,15 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
     leftSymbol: "AOA",
     decimalSeparator: ",",
   );
+
   final dueDateInputController = MaskedTextController(mask: "00/00/0000");
   final barcodeInputController = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
