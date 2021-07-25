@@ -42,6 +42,7 @@ class HomePage extends StatelessWidget {
       bottomNavigationBar: Container(
         height: 90,
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
               onPressed: () {},
@@ -52,9 +53,12 @@ class HomePage extends StatelessWidget {
               width: 56,
               height: 56,
               decoration: BoxDecoration(
-                color: AppColors.primary,
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(5)),
+              child: Icon(
+                Icons.add_box_outlined,
+                color: AppColors.background,
               ),
-              child: Icon(Icons.add_box_outlined, color: AppColors.background,),
             ),
             IconButton(
               onPressed: () {},
