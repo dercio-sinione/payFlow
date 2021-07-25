@@ -11,33 +11,36 @@ class InputTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        TextFormField(
-          style: AppTextStyles.input,
-          decoration: InputDecoration(
-            contentPadding: EdgeInsets.zero,
-            labelText: label,
-            labelStyle: AppTextStyles.input,
-            border: InputBorder.none,
-            icon: Row(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 18),
-                  child: Icon(icon, color: AppColors.primary),
-                ),
-                Container(width: 1, height: 46, color: AppColors.stroke),
-              ],
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16),
+      child: Column(
+        children: [
+          TextFormField(
+            style: AppTextStyles.input,
+            decoration: InputDecoration(
+              contentPadding: EdgeInsets.zero,
+              labelText: label,
+              labelStyle: AppTextStyles.input,
+              border: InputBorder.none,
+              icon: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 18),
+                    child: Icon(icon, color: AppColors.primary),
+                  ),
+                  Container(width: 1, height: 46, color: AppColors.stroke),
+                ],
+              ),
             ),
           ),
-        ),
-        Divider(
-          height: 1,
-          thickness: 1,
-          color: AppColors.stroke,
-        )
-      ],
+          Divider(
+            height: 1,
+            thickness: 1,
+            color: AppColors.stroke,
+          )
+        ],
+      ),
     );
   }
 }
