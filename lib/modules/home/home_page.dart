@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nl_pay_flow/modules/extract/extract_page.dart';
 import 'package:nl_pay_flow/modules/home/home_controller.dart';
 import 'package:nl_pay_flow/modules/meus_boletos/meus_boletos_page.dart';
 import 'package:nl_pay_flow/shared/models/boleto.dart';
@@ -19,7 +20,7 @@ class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
   final pages = [
     MeusBoletosPage(),
-    Container(color: Colors.blue),
+    ExtractPagePage(),
   ];
 
   @override
