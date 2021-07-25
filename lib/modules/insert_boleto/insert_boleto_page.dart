@@ -99,7 +99,9 @@ class _InsertBoletoPageState extends State<InsertBoletoPage> {
         labelPrimary: "Cancelar",
         onTapPrimary: () => Navigator.pop(context),
         labelSecondary: "Cadastrar",
-        onTapSecondary: () {},
+        onTapSecondary: () {
+          controller.CadastrarBoleto();
+        },
         enableSecondaryColor: true,
       ),
     );
