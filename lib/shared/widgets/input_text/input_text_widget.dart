@@ -3,7 +3,11 @@ import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
 class InputTextWidget extends StatelessWidget {
-  const InputTextWidget({Key? key}) : super(key: key);
+  final String label;
+  final IconData icon;
+
+  const InputTextWidget({Key? key, required this.label, required this.icon})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
