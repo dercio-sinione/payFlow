@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:nl_pay_flow/shared/themes/app_colors.dart';
+import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
+import 'package:nl_pay_flow/shared/widgets/boleto_list/boleto_list_controller.dart';
+import 'package:nl_pay_flow/shared/widgets/boleto_list/boleto_list_widget.dart';
 
 class ExtractPagePage extends StatefulWidget {
   const ExtractPagePage({Key? key}) : super(key: key);
@@ -15,23 +19,6 @@ class _ExtractPagePageState extends State<ExtractPagePage> {
     return SingleChildScrollView(
       child: Column(
         children: [
-          Stack(
-            children: [
-              Container(
-                color: AppColors.primary,
-                height: 40,
-                width: double.maxFinite,
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: ValueListenableBuilder<List<BoletoModel>>(
-                  valueListenable: controller.boletosNotifier,
-                  builder: (_, boletos, __) =>
-                      BoletoInfoWidget(size: boletos.length),
-                ),
-              ),
-            ],
-          ),
           Padding(
             padding: const EdgeInsets.only(top: 24, left: 24, right: 24),
             child: Row(
