@@ -14,6 +14,7 @@ class InputTextWidget extends StatelessWidget {
           decoration: InputDecoration(
             border: InputBorder.none,
             icon: Row(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 18),
