@@ -50,7 +50,10 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
               height: 1,
             ),
           ),
-          BoletoListWidget(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: BoletoListWidget(),
+          ),
         ],
       ),
     );
