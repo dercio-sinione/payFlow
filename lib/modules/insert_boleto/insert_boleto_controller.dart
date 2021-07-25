@@ -1,8 +1,9 @@
-
 import 'package:flutter/widgets.dart';
+import 'package:nl_pay_flow/shared/models/boleto.dart';
 
 class InsertBoletoController {
   final formKey = GlobalKey<FormState>();
+  BoletoModel model = BoletoModel();
 
   String? validateName(String? value) =>
       value?.isEmpty ?? true ? "O nome não pode ser vazio" : null;
@@ -17,7 +18,9 @@ class InsertBoletoController {
       value?.isEmpty ?? true ? "O código de barra não pode ser vazio" : null;
 
   void onChange(
-      {String? name, String? dueDate, double? value, String? barcode}) {}
+      {String? name, String? dueDate, double? value, String? barcode}) {
+    model = model.copyWith();
+  }
 
   void cadastrarBoleto() {
     final form = formKey.currentState;
