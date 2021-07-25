@@ -6,6 +6,7 @@ import 'package:nl_pay_flow/modules/meus_boletos/meus_boletos_page.dart';
 import 'package:nl_pay_flow/shared/models/users.dart';
 import 'package:nl_pay_flow/shared/routes/routes_config.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
+import 'package:nl_pay_flow/shared/themes/app_images.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
 class HomePage extends StatefulWidget {
@@ -56,7 +57,9 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
                   image: DecorationImage(
-                    image: NetworkImage(widget.user.photoURL!),
+                    // image: NetworkImage(widget.user.photoURL!),
+                    // image: ExactAssetImage(AppImages.person),
+                    image: AssetImage(AppImages.person),
                   ),
                 ),
               ),
