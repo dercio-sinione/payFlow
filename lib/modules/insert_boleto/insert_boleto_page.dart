@@ -3,6 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 import 'package:nl_pay_flow/shared/widgets/input_text/input_text_widget.dart';
+import 'package:nl_pay_flow/shared/widgets/set_label_buttons/set_label_buttons.dart';
 
 class InsertBoletoPage extends StatelessWidget {
   const InsertBoletoPage({Key? key}) : super(key: key);
@@ -48,6 +49,12 @@ class InsertBoletoPage extends StatelessWidget {
             onChanged: (value) {},
           ),
         ],
+      ),
+      bottomNavigationBar: SetLabelButtons(
+        labelPrimary: "Cancelar",
+        onTapPrimary: () {},
+        labelSecondary: "Cadastrar",
+        onTapSecondary: () {},
       ),
     );
   }
