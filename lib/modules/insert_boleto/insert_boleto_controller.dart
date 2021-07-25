@@ -30,25 +30,25 @@ class InsertBoletoController {
       value: value,
       barcode: barcode,
     );
+  }
 
-    Future<void> saveBoleto() async {
-      try {
-        final instance = await SharedPreferences.getInstance();
-        final boletos = instance.getStringList("boletos") ?? <String>[];
-        boletos.add(model.toJson());
-        await instance.setStringList("boletos", boletos);
-        return;
-      } catch (e) {
-        print(e.toString());
-      }
+  Future<void> saveBoleto() async {
+    try {
+      final instance = await SharedPreferences.getInstance();
+      final boletos = instance.getStringList("boletos") ?? <String>[];
+      boletos.add(model.toJson());
+      await instance.setStringList("boletos", boletos);
+      return;
+    } catch (e) {
+      print(e.toString());
     }
+  }
 
-    Future<void> cadastrarBoleto() async {
-      final form = formKey.currentState;
-      if (form!.validate()) {
-        print(model);
-        return saveBoleto();
-      }
+  Future<void> cadastrarBoleto() async {
+    final form = formKey.currentState;
+    if (form!.validate()) {
+      print(model);
+      return saveBoleto();
     }
   }
 }
