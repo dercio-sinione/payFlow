@@ -13,12 +13,10 @@ class BoletoTileWidget extends StatelessWidget {
       subtitle:
           Text("Vence em ${data.dueDate}", style: AppTextStyles.captionBody),
       trailing: Text.rich(TextSpan(
-          text: "${data.value} AOA",
-          style: AppTextStyles.trailingRegular,
+          text: "${data.value!.toStringAsFixed(2)}",
+          style: AppTextStyles.trailingBold,
           children: [
-            TextSpan(
-                text: "${data.value!.toStringAsFixed(2)}",
-                style: AppTextStyles.trailingBold),
+            TextSpan(text: " AOA", style: AppTextStyles.trailingRegular),
           ])),
     );
   }
