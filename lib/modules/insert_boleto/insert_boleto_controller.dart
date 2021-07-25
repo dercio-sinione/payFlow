@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:flutter/widgets.dart';
 
@@ -20,7 +19,7 @@ class InsertBoletoController {
   void onChange(
       {String? name, String? dueDate, double? value, String? barcode}) {}
 
-  void CadastrarBoleto() {
+  void cadastrarBoleto() {
     final form = formKey.currentState;
     if (form!.validate()) {
       print("Formulario valido");
