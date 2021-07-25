@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/widgets.dart';
 
 class InsertBoletoController {
@@ -14,6 +16,9 @@ class InsertBoletoController {
 
   String? validateCodigo(String? value) =>
       value?.isEmpty ?? true ? "O código de barra não pode ser vazio" : null;
+
+  void onChange(
+      {String? name, String? dueDate, Double? value, String? barcode}) {}
 
   void CadastrarBoleto() {
     final form = formKey.currentState;
