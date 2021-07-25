@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nl_pay_flow/shared/models/boleto.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 import 'package:nl_pay_flow/shared/widgets/boleto_info/boleto_info_widget.dart';
@@ -29,7 +30,11 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 24),
-                child: BoletoInfoWidget(size: 14),
+                child: ValueListenableBuilder<List<BoletoModel>>(
+                  valueListenable: controller.boletosNotifier,
+                  builder: (_, boletos, __) =>
+                      BoletoInfoWidget(size: boletos.length),
+                ),
               ),
             ],
           ),
@@ -55,7 +60,7 @@ class _MeusBoletosPageState extends State<MeusBoletosPage> {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
-            child: BoletoListWidget(),
+            child: BoletoListWidget(controller: controller),
           ),
         ],
       ),
