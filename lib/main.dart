@@ -15,7 +15,7 @@ class AppWidget extends StatelessWidget {
       title: 'Pay Flow',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primaryColor: AppColors.primary),
-      initialRoute: AppRoutes.login,
+      initialRoute: AppRoutes.splash,
       routes: fnAppRoutes(context),
     );
   }
