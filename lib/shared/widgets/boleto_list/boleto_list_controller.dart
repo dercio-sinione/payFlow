@@ -4,8 +4,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class BoletoListController {
   final boletosNotifier = ValueNotifier<List<BoletoModel>>(<BoletoModel>[]);
-  List<BoletoModel> boletos = <BoletoModel>[];
-
+  List<BoletoModel> get boletos => boletosNotifier.value;
+  
   BoletoListController() {
     getBoletos();
   }
