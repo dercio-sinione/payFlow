@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 
-import 'package:payflow/shared/themes/app_colors.dart';
 
 class DividerWidget extends StatelessWidget {
   final double height;
@@ -9,8 +9,8 @@ class DividerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: AppColors.stroke, 
-      height: height, 
+      color: AppColors.stroke,
+      height: height,
       width: 1,
     );
   }
