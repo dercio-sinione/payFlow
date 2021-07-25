@@ -17,8 +17,12 @@ class InsertBoletoController {
   String? validateCodigo(String? value) =>
       value?.isEmpty ?? true ? "O código de barra não pode ser vazio" : null;
 
-  void onChange(
-      {String? name, String? dueDate, double? value, String? barcode}) {
+  void onChange({
+    String? name,
+    String? dueDate,
+    double? value,
+    String? barcode,
+  }) {
     model = model.copyWith(
       name: name,
       dueDate: dueDate,
