@@ -49,15 +49,18 @@ class HomePage extends StatelessWidget {
               icon: Icon(Icons.home),
               color: AppColors.primary,
             ),
-            Container(
-              width: 56,
-              height: 56,
-              decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(5)),
-              child: Icon(
-                Icons.add_box_outlined,
-                color: AppColors.background,
+            GestureDetector(
+              onTap: () => print("Clicou"),
+              child: Container(
+                width: 56,
+                height: 56,
+                decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(5)),
+                child: Icon(
+                  Icons.add_box_outlined,
+                  color: AppColors.background,
+                ),
               ),
             ),
             IconButton(
