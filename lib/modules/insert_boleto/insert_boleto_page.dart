@@ -16,7 +16,7 @@ class InsertBoletoPage extends StatefulWidget {
 
 class _InsertBoletoPageState extends State<InsertBoletoPage> {
   final moneyInputController = MoneyMaskedTextController(
-    leftSymbol: "AOA",
+    rightSymbol: " AOA",
     decimalSeparator: ",",
   );
 
