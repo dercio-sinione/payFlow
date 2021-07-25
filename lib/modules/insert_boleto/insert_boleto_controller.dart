@@ -14,4 +14,12 @@ class InsertBoletoController {
 
   String? validateCodigo(String? value) =>
       value?.isEmpty ?? true ? "O código de barra não pode ser vazio" : null;
+
+  void CadastrarBoleto() {
+    final form = formKey.currentState;
+    if (form!.validate()) {
+      print("Formulario valido");
+      print(form);
+    }
+  }
 }
