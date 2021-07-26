@@ -8,8 +8,16 @@ List<User> listUsers = [
       email: "dercio@gmail.com",
       password: "1234",
       photoURL: AppImages.person),
-  User(username: "ana", email: "ana@gmail.com", password: "1234a"),
-  User(username: "derone", email: "derone@gmail.com", password: "1234")
+  User(
+      username: "ana",
+      email: "ana@gmail.com",
+      password: "1234a",
+      photoURL: AppImages.person),
+  User(
+      username: "derone",
+      email: "derone@gmail.com",
+      password: "1234",
+      photoURL: AppImages.person)
 ];
 
 class User {

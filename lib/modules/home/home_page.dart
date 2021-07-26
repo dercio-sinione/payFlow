@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+
+import 'package:nl_pay_flow/modules/extract/extract_page.dart';
 import 'package:nl_pay_flow/modules/home/home_controller.dart';
+import 'package:nl_pay_flow/modules/meus_boletos/meus_boletos_page.dart';
+import 'package:nl_pay_flow/shared/models/users.dart';
 import 'package:nl_pay_flow/shared/routes/routes_config.dart';
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
+import 'package:nl_pay_flow/shared/themes/app_images.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  final User user;
+  const HomePage({Key? key, required this.user}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -13,10 +19,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
-  final pages = [
-    Container(color: Colors.red),
-    Container(color: Colors.blue),
-  ];
+  // final pages = [
+  //   MeusBoletosPage(
+  //     key: UniqueKey(),
+  //   ),
+  //   ExtractPagePage(key: UniqueKey()),
+  // ];
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                     style: AppTextStyles.titleRegular,
                     children: [
                       TextSpan(
-                          text: "Dércio",
+                          text: "${widget.user.username}",
                           style: AppTextStyles.titleBoldBackground),
                     ]),
               ),
@@ -50,6 +58,11 @@ class _HomePageState extends State<HomePage> {
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(5),
+                  image: DecorationImage(
+                    // image: NetworkImage(widget.user.photoURL!),
+                    // image: ExactAssetImage(AppImages.person),
+                    image: AssetImage(AppImages.person),
+                  ),
                 ),
               ),
             ),
@@ -57,7 +70,10 @@ class _HomePageState extends State<HomePage> {
         ),
         preferredSize: Size.fromHeight(152),
       ),
-      body: pages[homeController.currentPage],
+      body: [
+        MeusBoletosPage(key: UniqueKey()),
+        ExtractPagePage(key: UniqueKey()),
+      ][homeController.currentPage],
       bottomNavigationBar: Container(
         height: 90,
         child: Row(
@@ -66,10 +82,15 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               onPressed: () => fnChangePage(0),
               icon: Icon(Icons.home),
-              color: AppColors.primary,
+              color: homeController.currentPage == 0
+                  ? AppColors.primary
+                  : AppColors.body,
             ),
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, AppRoutes.insertBoleto),
+              onTap: () async {
+                await Navigator.pushNamed(context, AppRoutes.insertBoleto);
+                setState(() {});
+              },
               child: Container(
                 width: 56,
                 height: 56,
@@ -85,7 +106,9 @@ class _HomePageState extends State<HomePage> {
             IconButton(
               onPressed: () => fnChangePage(1),
               icon: Icon(Icons.description_outlined),
-              color: AppColors.body,
+              color: homeController.currentPage == 1
+                  ? AppColors.primary
+                  : AppColors.body,
             ),
           ],
         ),

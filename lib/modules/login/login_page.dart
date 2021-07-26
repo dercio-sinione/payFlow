@@ -1,3 +1,4 @@
+import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
 
 import 'package:nl_pay_flow/modules/login/login_controller.dart';
@@ -44,7 +45,9 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Image.asset(AppImages.logomini),
+                  AnimatedCard(
+                      direction: AnimatedCardDirection.top,
+                      child: Image.asset(AppImages.logomini)),
                   Padding(
                     padding:
                         const EdgeInsets.only(top: 30, left: 70, right: 70),
