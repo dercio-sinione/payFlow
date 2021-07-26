@@ -1,5 +1,6 @@
 import 'package:animated_card/animated_card.dart';
 import 'package:flutter/material.dart';
+
 import 'package:nl_pay_flow/shared/themes/app_colors.dart';
 import 'package:nl_pay_flow/shared/themes/app_text_style.dart';
 
