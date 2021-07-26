@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  AnimatedCar(
+                  AnimatedCard(
                       direction: AnimatedCardDirection.top,
                       child: Image.asset(AppImages.logomini)),
                   Padding(
