@@ -20,8 +20,10 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final homeController = HomeController();
   final pages = [
-    MeusBoletosPage(),
-    ExtractPagePage(),
+    MeusBoletosPage(
+      key: UniqueKey(),
+    ),
+    ExtractPagePage(key: UniqueKey()),
   ];
 
   @override
@@ -82,7 +84,10 @@ class _HomePageState extends State<HomePage> {
                   : AppColors.body,
             ),
             GestureDetector(
-              onTap: () => Navigator.pushNamed(context, AppRoutes.insertBoleto),
+              onTap: () async {
+                await Navigator.pushNamed(context, AppRoutes.insertBoleto);
+                setState(() {});
+              },
               child: Container(
                 width: 56,
                 height: 56,
